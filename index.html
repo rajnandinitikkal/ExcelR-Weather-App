@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend:{
+                    colors: {
+                        clifford: "#da373d",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="h-[100vh] flex justify-center items-center">
+
+    <div class="md:h-[80%] md:w-[80%] h-full w-full rounded-lg overflow-hidden shadow-lg flex md:flex md:flex-row flex-col-reverse ">
+
+        <div class="md:h-full h-[50%] md:w-[40%] w-full md:p-28 p-3 text-center">
+
+            <div class="rounder-md border px-4 py-2 flex justify-between mb-28">
+               <input type="text" class="outline-none w-full" placeholder="Enter city Name" id="city_ip"/>
+               <i class="fi fi-rr-search cursor-pointer" id="search_btn"></i>
+            </div>
+            <h1 class="text-2xl">Temprature :<span id="temp">0</span> <sup>o</sup>C</h1>
+            <h1>Humidity :<span id="humi">0</span> </h1>
+            <h1>Wind Speed : <span id="wind">0</span></h1>
+            <h1>Weather Condition : <span id="weather">unknown</span></h1>
+        </div> 
+
+        <div class="md:h-full h-[50%] md:w-[60%] w-full flex justify-center items-end">
+            <lottie-player src="https://lottie.host/f856bce7-a2de-406a-9563-a5eb357a76fb/GWIqpPu6BJ.json" background="transparent" speed="1" style="width: 80%; height: 80%" loop autoplay ></lottie-player>
+        </div> 
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
